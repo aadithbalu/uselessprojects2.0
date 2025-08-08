@@ -1,7 +1,7 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# SunShade 🎯
 
 
 ## Basic Details
@@ -65,16 +65,14 @@ None
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://github.com/user-attachments/assets/a78af530-c50e-4b77-9cc4-09427c2e09c0
+The video demonstrates how the website works.
 
 # Additional Demos
 None
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+Equal contributions.
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
