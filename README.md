@@ -1,7 +1,7 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# SunShade 🎯
+# [Project Name] 🎯
 
 
 ## Basic Details
@@ -11,7 +11,6 @@
 ### Team Members
 - Team Lead: Aadith Balachandran - SCMS School of Engineering and Technology
 - Member 2: Aditya B - SCMS School of Engineering and Technology
-
 
 ### Project Description
 SunShade is an interactive web app that uses GPS or manual input to detect your travel direction and time of day, then recommends the best side to sit on a bus to avoid direct sunlight. 
@@ -29,10 +28,8 @@ For Software:
 - Frameworks/Libraries: None
 - Tools: Google Fonts (Poppins), Browser Geolocation API
 
-
 For Hardware:
 - Any device with a GPS-enabled browser (smartphone, tablet, laptop)
-
 
 ### Implementation
 For Software:
@@ -40,36 +37,43 @@ For Software:
 No installations needed
 
 # Run
-Open sample.html in your browser and grant location access for automatic direction detection, or select direction manually. Pick a time or use current time, then hit “Find Best Side.”
+[commands]
 
 ### Project Documentation
 For Software:
-- The app uses the Geolocation API to get heading data when set to Auto direction mode.
-- Time input helps simulate or select the time of day.
-- Logic compares direction and time to recommend the side least exposed to sunlight.
-- Responsive and accessible UI styled with CSS variables and Google Fonts.
 
-# Screenshots 
-<img width="1582" height="911" alt="1" src="https://github.com/user-attachments/assets/b411b73d-f439-49ca-89f2-54e36e118ca2" />
-This image shows the website asking permission to track location. 
+# Screenshots (Add at least 3)
+![Screenshot1](Add screenshot 1 here with proper name)
+*Add caption explaining what this shows*
 
-<img width="1362" height="642" alt="3" src="https://github.com/user-attachments/assets/63b9d86e-4e87-456a-8782-ec7fc764bdb6" />
-This image shows the output at a particular time.
+![Screenshot2](Add screenshot 2 here with proper name)
+*Add caption explaining what this shows*
 
-<img width="1392" height="622" alt="4" src="https://github.com/user-attachments/assets/70087c61-fa23-4423-8c09-e431ee470de8" />
-This image shows the output when time is set to night.
+![Screenshot3](Add screenshot 3 here with proper name)
+*Add caption explaining what this shows*
 
 # Diagrams
-None
+![Workflow](Add your workflow/architecture diagram here)
+*Add caption explaining your workflow*
 
 For Hardware:
-None
 
 # Schematic & Circuit
-None
+![Circuit](Add your circuit diagram here)
+*Add caption explaining connections*
+
+![Schematic](Add your schematic diagram here)
+*Add caption explaining the schematic*
 
 # Build Photos
-None
+![Components](Add photo of your components here)
+*List out all components shown*
+
+![Build](Add photos of build process here)
+*Explain the build steps*
+
+![Final](Add photo of final product here)
+*Explain the final build*
 
 ### Project Demo
 # Video
