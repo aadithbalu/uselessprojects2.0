@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SUN SHADE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f9e76c;
+      --gloss1: #ffd84d;
+      --gloss2: #f6c941;
+      --ink: #1f2a2e;
+      --muted: rgba(31,42,46,0.6);
+      --glass: rgba(255,255,255,0.12);
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    * { box-sizing: border-box }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.12), transparent 8%),
+        linear-gradient(180deg, #fffbe6 0%, var(--bg) 40%, #ffd85a 100%);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      min-height: 100vh;
+    }
+    .scene { width: 100%; max-width: 980px }
+    .card {
+      border-radius: 18px;
+      padding: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.12));
+      box-shadow: 0 18px 40px rgba(14,14,14,0.18), inset 0 1px 0 rgba(255,255,255,0.35);
+      backdrop-filter: blur(6px);
+    }
+    .card-header { margin-bottom: 14px }
+    .card-header h1 { margin: 0; font-size: 28px; font-weight: 800 }
+    .tagline { margin: 0; color: var(--muted); font-size: 13px; text-align: center; }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .control-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .control-row input,
+    .control-row select {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 0;
+      outline: none;
+      box-shadow: 0 8px 18px rgba(11,11,11,0.06), inset 0 1px 0 rgba(255,255,255,0.4);
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+      font-size: 14px;
+    }
+    .btn {
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 700;
+      background: linear-gradient(180deg, var(--gloss1), var(--gloss2));
+      box-shadow: 0 10px 22px rgba(246,201,65,0.28), 0 2px 0 rgba(255,255,255,0.4) inset;
+    }
+    .btn.ghost {
+      background: transparent;
+      border: 1px solid rgba(31,42,46,0.06);
+      box-shadow: none;
+    }
+    .btn:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+      transition: all 0.2s ease;
+    }
+    .result {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .direction-box {
+      border-radius: 14px;
+      padding: 14px;
+      background: var(--glass);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.12);
+      min-width: 200px;
+      text-align: center;
+    }
+    .dir-title { font-weight: 700; font-size: 12px; color: var(--muted) }
+    .dir-value { font-weight: 800; font-size: 20px; margin-top: 6px }
+    .dir-sub { font-size: 12px; color: var(--muted); margin-top: 6px }
+    .card-3d {
+      border-radius: 14px;
+      padding: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.06));
+      box-shadow: 0 18px 30px rgba(0,0,0,0.12), 0 6px 14px rgba(0,0,0,0.06);
+    }
+    .rec-title { font-weight: 700; color: var(--muted); font-size: 12px }
+    .rec-main { font-size: 22px; font-weight: 800 }
+    .funny {
+      color: var(--muted);
+      font-size: 13px;
+      font-style: italic;
+      opacity: 0.85;
+    }
+    @media (max-width: 480px) {
+      .controls { grid-template-columns: 1fr }
+      .result { flex-direction: column }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="card">
+      <div class="card-header">
+        <h1 style="text-align: center;">SUN SHADE</h1>
+        <p class="tagline">Find the shadiest spot</p>
+      </div>
+      <div class="controls">
+        <div class="control-row">
+          <label for="direction">Direction of Travel</label>
+          <select id="direction">
+            <option value="auto" selected>Auto (via GPS)</option>
+            <option value="N">North</option>
+            <option value="NE">Northeast</option>
+            <option value="E">East</option>
+            <option value="SE">Southeast</option>
+            <option value="S">South</option>
+            <option value="SW">Southwest</option>
+            <option value="W">West</option>
+            <option value="NW">Northwest</option>
+          </select>
+        </div>
+        <div class="control-row">
+          <label for="time">Time of Day</label>
+          <input type="time" id="time">
+        </div>
+      </div>
+      <div class="controls">
+        <button class="btn" id="findBtn">Find Best Side</button>
+        <button class="btn ghost" id="resetBtn">Reset</button>
+      </div>
+      <div class="result">
+        <div class="direction-box">
+          <div class="dir-title">Current Direction</div>
+          <div class="dir-value" id="currentDir">--</div>
+          <div class="dir-sub" id="gpsStatus">GPS not active</div>
+        </div>
+        <div class="card-3d">
+          <div class="rec-title">Recommended Side</div>
+          <div class="rec-main" id="bestSide">--</div>
+          <div class="funny" id="funnyComment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  const directionSelect = document.getElementById('direction');
+  const timeInput = document.getElementById('time');
+  const currentDir = document.getElementById('currentDir');
+  const gpsStatus = document.getElementById('gpsStatus');
+  const bestSide = document.getElementById('bestSide');
+  const funnyComment = document.getElementById('funnyComment');
+
+  const funnyLines = [
+    "Shade is your friend, unless you’re a sunflower.",
+    "Sun who?",
+    "You’ll be cooler than the other side of the pillow.",
+    "Perfect spot for a vampire.",
+    "Welcome to the shade. Cookies not included.",
+  ];
+
+  let watchId;
+  function startGPS() {
+    if (navigator.geolocation) {
+      gpsStatus.textContent = "Locating...";
+      watchId = navigator.geolocation.watchPosition(pos => {
+        gpsStatus.textContent = "GPS Active";
+        let heading = pos.coords.heading;
+        if (directionSelect.value === "auto") {
+          if (heading === undefined || heading === null || isNaN(heading)) {
+            heading = Math.random() * 360;
+            gpsStatus.textContent += " (no compass, showing demo direction)";
+          }
+          const dir = getCompassDir(heading);
+          currentDir.textContent = dir;
+        }
+      }, err => {
+        gpsStatus.textContent = "GPS Error (tap manual direction)";
+      }, { enableHighAccuracy: true });
+    } else {
+      gpsStatus.textContent = "GPS Not Supported";
+    }
+  }
+
+  function stopGPS() {
+    if (watchId) {
+      navigator.geolocation.clearWatch(watchId);
+      gpsStatus.textContent = "GPS stopped";
+    }
+  }
+
+  function getCompassDir(deg) {
+    const dirs = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+    return dirs[Math.round(deg / 45) % 8];
+  }
+
+  document.getElementById('findBtn').addEventListener('click', () => {
+    let dir = directionSelect.value;
+    let timeVal = timeInput.value;
+    if (dir === "auto") dir = currentDir.textContent;
+    if (!dir || dir === "--") {
+      alert("Please wait for direction or choose manually.");
+      return;
+    }
+
+    let hours = 12; 
+    if (timeVal) {
+      hours = parseInt(timeVal.split(':')[0]) + parseInt(timeVal.split(':')[1]) / 60;
+    } else {
+      const now = new Date();
+      hours = now.getHours() + now.getMinutes() / 60;
+    }
+
+    if (hours < 6 || hours > 18.5) {
+      bestSide.textContent = "Sun’s down – take a nap";
+      funnyComment.textContent = "🌙 Time to chill – no sun, no stress.";
+      return;
+    }
+
+    if (hours >= 11.5 && hours <= 14) {
+      bestSide.textContent = "Sit anywhere – the sun is inevitable";
+      funnyComment.textContent = "☀ Hahaha, you're cooked";
+      return;
+    }
+
+    let side = "Either side";
+    if (["E", "SE", "NE"].includes(dir)) {
+      side = "Left Side";
+    } else if (["W", "SW", "NW"].includes(dir)) {
+      side = "Right Side";
+    } else if (dir === "N") {
+      side = (hours < 12) ? "Left Side" : "Right Side";
+    } else if (dir === "S") {
+      side = (hours < 12) ? "Right Side" : "Left Side";
+    }
+
+    if ((dir === "N" || dir === "S") && timeVal) {
+      side += (hours < 12) ? " (AM)" : " (PM)";
+    }
+
+    bestSide.textContent = side;
+    funnyComment.textContent = funnyLines[Math.floor(Math.random() * funnyLines.length)];
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    bestSide.textContent = "--";
+    funnyComment.textContent = "";
+    currentDir.textContent = "--";
+    directionSelect.value = "auto";
+    timeInput.value = "";
+    stopGPS();
+    startGPS();
+  });
+
+  directionSelect.addEventListener('change', () => {
+    if (directionSelect.value === "auto") {
+      startGPS();
+    } else {
+      stopGPS();
+      currentDir.textContent = directionSelect.value;
+      gpsStatus.textContent = "Manual Direction";
+    }
+  });
+
+  startGPS();
+</script>
+
+</body>
+</html>
