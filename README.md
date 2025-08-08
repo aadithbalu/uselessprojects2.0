@@ -43,37 +43,25 @@ Open index.html directly in Chrome, Firefox, Edge, or any modern browser
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1582" height="911" alt="1" src="https://github.com/user-attachments/assets/a7a03117-ad04-4ea0-9b71-50b9dce1e8ce" />
+This image shows the website asking permission to access location of the user.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1298" height="542" alt="2" src="https://github.com/user-attachments/assets/788e383c-b6b4-4651-8294-a6e8e3751916" />
+This image shows the output for a given time.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1392" height="622" alt="4" src="https://github.com/user-attachments/assets/0520fc94-14a0-43c0-9c86-ec426cf44295" />
+This image shows the output when the time is given as night.
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+None
 
-For Hardware:
+For Hardware: None
 
 # Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+None
 
 # Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
+None
 
 ### Project Demo
 # Video
@@ -81,7 +69,7 @@ For Hardware:
 *Explain what the video demonstrates*
 
 # Additional Demos
-[Add any extra demo materials/links]
+None
 
 ## Team Contributions
 - [Name 1]: [Specific contributions]
