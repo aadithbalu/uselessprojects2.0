@@ -46,7 +46,7 @@ For Software:
 <img width="1582" height="911" alt="1" src="https://github.com/user-attachments/assets/a7a03117-ad04-4ea0-9b71-50b9dce1e8ce" />
 This image shows the website asking permission to access location of the user.
 
-<img width="1298" height="542" alt="2" src="https://github.com/user-attachments/assets/788e383c-b6b4-4651-8294-a6e8e3751916" />
+<img width="1362" height="642" alt="3" src="https://github.com/user-attachments/assets/8ea2bc3c-11c0-4a75-af0b-4a3ef7915126" />
 This image shows the output for a given time.
 
 <img width="1392" height="622" alt="4" src="https://github.com/user-attachments/assets/0520fc94-14a0-43c0-9c86-ec426cf44295" />
