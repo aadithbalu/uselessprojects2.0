@@ -32,12 +32,12 @@ For Hardware:
 - Any device with a GPS-enabled browser (smartphone, tablet, laptop)
 
 ### Implementation
-For Software:
+For Software: None
 # Installation
 No installations needed
 
 # Run
-[commands]
+Open index.html directly in Chrome, Firefox, Edge, or any modern browser
 
 ### Project Documentation
 For Software:
